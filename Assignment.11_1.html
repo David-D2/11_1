@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <!-- Assignment –Show the Scope value inside the view with ng-model directives. -->
+    <title></title>
+    <script src="http://localhost:56130/angular.min.js"></script>
+    <script type="text/javascript">
+        var appvar = angular.module('myApp', []);
+        appvar.controller('myCtrl', function($scope){
+            $scope.Name = 'Dave Dickson';
+            $scope.EmployeeID ='74567';
+            $scope.Designation = "AcadGuild Student"
+        });
+    </script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtrl">
+        <p>To demonstrate ng-model data binding, write something in the input field:</p>
+        <input type="text" ng-model="Name" />
+        <input type="text" ng-model="EmployeeID" />
+        <input type="text" ng-model="Designation" />
+        <p>{{Name}}</p>
+        <p>{{EmployeeID}}</p>
+        <p>{{Designation}}</p>
+    </div>
+</body>
+</html>
